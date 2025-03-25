@@ -1,26 +1,11 @@
-import react from "@vitejs/plugin-react";
-import { defineConfig } from "vite";
+import { buildViteConfig } from "../../../vite.config";
 
-// https://vite.dev/config/
-export default defineConfig({
-    build: {
-        lib: {
-            cssFileName: "app2-shared",
-            entry: "src/public-api.ts",
-            fileName: "app2-shared",
-            formats: ["es"],
-            name: "app2-shared",
-        },
-        rollupOptions: {
-            external: ["react", "react-dom/client", "react-router"],
-            output: {
-                globals: {
-                    react: "react",
-                    "react-dom": "ReactDOM",
-                    "react-router": "ReactRouter",
-                },
-            },
-        },
+export default buildViteConfig({
+    lib: {
+        entry: "src/public-api.ts",
+        fileName: "shared",
+        formats: ["es"],
     },
-    plugins: [react()],
+    reactOptions: { jsxRuntime: "classic" },
+    server: { port: 3003 },
 });

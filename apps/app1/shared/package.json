@@ -3,10 +3,8 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
-    "exports": {
-        "./components/*": "./src/components/*.tsx",
-        "./hooks/*": "./src/hooks/*.tsx"
-    },
+    "main": "./src/public-api.ts",
+    "module": "./src/public-api.ts",
     "scripts": {
         "dev": "vite",
         "build": "tsc -b && vite build",

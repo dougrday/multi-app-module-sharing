@@ -1,8 +1,7 @@
 import { lazy, useState } from "react";
 import viteLogo from "./assets/vite.svg";
 import "./App1.css";
-
-const App2Component = lazy(() => import("@example/app2-shared/components/App2Component"));
+import { App2Component } from "@example/app2-shared";
 
 function App1() {
     return (
