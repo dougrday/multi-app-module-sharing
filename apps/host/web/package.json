@@ -1,0 +1,18 @@
+{
+    "name": "@example/host-web",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "main": "./src/main.tsx",
+    "module": "./src/main.tsx",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc -b && vite build",
+        "lint": "eslint .",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@example/app1-web": "workspace:*",
+        "@example/app2-web": "workspace:*"
+    }
+}

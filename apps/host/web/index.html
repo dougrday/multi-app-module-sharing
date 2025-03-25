@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Multi-App Deployment with Shared Modules</title>
+        <script type="module">
+            import React from "https://esm.sh/react@19/?dev";
+            import ReactDOM from "https://esm.sh/react-dom@19/client?dev";
+            import * as ReactRouter from "https://esm.sh/react-router@7.4.0";
+            window["React"] = React;
+            window["ReactDOM"] = ReactDOM;
+            window["ReactRouter"] = ReactRouter;
+        </script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="module" src="/src/main.tsx"></script>
+    </body>
+</html>

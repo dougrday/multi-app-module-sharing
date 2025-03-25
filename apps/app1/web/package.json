@@ -1,0 +1,21 @@
+{
+    "name": "@example/app1-web",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "main": "./src/App1.tsx",
+    "module": "./src/App1.tsx",
+    "exports": {
+        ".": "./src/App1.tsx",
+        "./routes": "./src/routes.tsx"
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc -b && vite build",
+        "lint": "eslint .",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@example/app2-shared": "workspace:*"
+    }
+}

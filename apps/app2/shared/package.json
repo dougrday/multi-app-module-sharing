@@ -1,0 +1,18 @@
+{
+    "name": "@example/app2-shared",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "main": "./src/public-api.ts",
+    "module": "./src/public-api.ts",
+    "exports": {
+        ".": "./src/public-api.ts",
+        "./components/*": "./src/components/*.tsx"
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc -b && vite build",
+        "lint": "eslint .",
+        "preview": "vite preview"
+    }
+}

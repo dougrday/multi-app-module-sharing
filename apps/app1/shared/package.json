@@ -1,0 +1,16 @@
+{
+    "name": "@example/app1-shared",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "exports": {
+        "./components/*": "./src/components/*.tsx",
+        "./hooks/*": "./src/hooks/*.tsx"
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc -b && vite build",
+        "lint": "eslint .",
+        "preview": "vite preview"
+    }
+}
