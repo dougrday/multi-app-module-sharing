@@ -2,9 +2,9 @@ import { buildViteConfig } from "../../../vite.config";
 
 export default buildViteConfig({
     lib: {
-        cssFileName: "web",
-        entry: "src/public-api.ts",
-        fileName: "web",
+        cssFileName: "app",
+        entry: "src/entrypoints/app.ts",
+        fileName: () => "app.mjs",
         formats: ["es"],
     },
     preview: { port: 3002 },

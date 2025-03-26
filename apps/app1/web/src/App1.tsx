@@ -1,4 +1,4 @@
-import { App2Component } from "@example/app2-shared";
+import { App2Component } from "@example/app2-shared/components";
 import viteLogo from "./assets/vite.svg";
 import classes from "./App1.module.css";
 

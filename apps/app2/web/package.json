@@ -3,11 +3,8 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
-    "main": "./src/public-api.ts",
-    "module": "./src/public-api.ts",
     "exports": {
-        ".": "./src/public-api.ts",
-        "./routes": "./src/routes.tsx"
+        ".": "./src/entrypoints/app.ts"
     },
     "scripts": {
         "dev": "vite",

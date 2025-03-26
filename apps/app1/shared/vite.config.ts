@@ -2,8 +2,9 @@ import { buildViteConfig } from "../../../vite.config";
 
 export default buildViteConfig({
     lib: {
-        entry: "src/public-api.ts",
-        fileName: "shared",
+        cssFileName: "components",
+        entry: ["src/entrypoints/components.ts", "src/entrypoints/hooks.ts"],
+        fileName: (_, entryName) => `${entryName}.mjs`,
         formats: ["es"],
     },
     preview: { port: 3001 },

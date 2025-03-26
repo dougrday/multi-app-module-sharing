@@ -3,8 +3,9 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
-    "main": "./src/public-api.ts",
-    "module": "./src/public-api.ts",
+    "exports": {
+        "./components": "./src/entrypoints/components.ts"
+    },
     "scripts": {
         "dev": "vite",
         "build": "tsc -b && vite build",

@@ -1,15 +1,16 @@
 import react, { Options as ReactPluginOptions } from "@vitejs/plugin-react";
-import { defineConfig, LibraryOptions, PreviewOptions, ServerOptions, UserConfig } from "vite";
+import { defineConfig, LibraryOptions, PreviewOptions, BuildOptions, ServerOptions, UserConfig } from "vite";
 
 interface BuildViteConfigOptions {
     lib?: LibraryOptions;
     preview?: PreviewOptions;
     reactOptions?: ReactPluginOptions;
+    rollupOptions?: BuildOptions["rollupOptions"];
     server?: ServerOptions;
 }
 
 // https://vite.dev/config/
-export const buildViteConfig = ({ lib, preview, reactOptions, server }: BuildViteConfigOptions) =>
+export const buildViteConfig = ({ lib, preview, reactOptions, rollupOptions, server }: BuildViteConfigOptions) =>
     defineConfig({
         build: {
             minify: false,
@@ -26,6 +27,7 @@ export const buildViteConfig = ({ lib, preview, reactOptions, server }: BuildVit
                     "react",
                     "react-dom/client",
                 ],
+                ...rollupOptions,
             },
             sourcemap: true,
         },
