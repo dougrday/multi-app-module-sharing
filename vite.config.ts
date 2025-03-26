@@ -30,6 +30,8 @@ export const buildViteConfig = ({ lib, preview, reactOptions, server }: BuildVit
             sourcemap: true,
         },
         define: {
+            // Believe it or not, the CDN-deployed "react" has `process.env.NODE_ENV` checks in it.
+            // This makes it unsuitable for browser-based apps without some help, like this 👇🏽
             "process.env": {
                 NODE_ENV: JSON.stringify(process.env.NODE_ENV),
             },
