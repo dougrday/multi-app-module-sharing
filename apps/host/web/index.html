@@ -5,7 +5,23 @@
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Multi-App Deployment with Shared Modules</title>
-        <!-- FIXME: I don't like having these here -->
+
+        <!--
+        TODO: Optimize CSS loading strategy
+
+        Current implementation loads all app-specific CSS files upfront to prevent FOUC
+        (Flash of Unstyled Content). This approach is suboptimal as it:
+        1. Increases initial load time
+        2. Downloads potentially unnecessary CSS
+        3. Creates maintenance overhead
+
+        Proposed solution:
+        - Implement dynamic CSS loading through the router
+        - Load app-specific CSS during route transitions
+        - Ensure styles are ready before app initialization
+        - Consider using CSS-in-JS or CSS Modules for better isolation
+        -->
+
         <link rel="stylesheet" href="http://localhost:3002/web.css" />
         <link rel="stylesheet" href="http://localhost:3004/web.css" />
 
