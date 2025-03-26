@@ -1,5 +1,5 @@
 import reactLogo from "./assets/react.svg";
-import "./App2.css";
+import classes from "./App2.module.css";
 import { useApp1Hook } from "@example/app1-shared";
 
 function App2() {
@@ -9,7 +9,7 @@ function App2() {
         <>
             <div>
                 <a href="https://react.dev" target="_blank">
-                    <img src={reactLogo} className="logo react" alt="React logo" />
+                    <img src={reactLogo} className={classes.logo} alt="React logo" />
                 </a>
             </div>
             <h1>React is also cool</h1>
