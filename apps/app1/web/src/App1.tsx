@@ -11,7 +11,13 @@ function App1() {
                 </a>
             </div>
             <h1>Vite is cool</h1>
-            <App2Component />
+
+            <div style={{ alignItems: "center", display: "flex", flexDirection: "column" }}>
+                <span>
+                    This component is imported from <code>@example/app2-shared</code>, with its own embedded CSS module:
+                </span>
+                <App2Component />
+            </div>
         </>
     );
 }

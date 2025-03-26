@@ -7,3 +7,23 @@
 .logo:hover {
     filter: drop-shadow(0 0 2em #ccff66);
 }
+
+.container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    margin: 1em 0;
+    transition: transform 200ms;
+}
+.card:hover {
+    transform: translateY(-5px);
+}

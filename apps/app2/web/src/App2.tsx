@@ -13,8 +13,13 @@ function App2() {
                 </a>
             </div>
             <h1>React is also cool</h1>
-            <div className="card">
-                <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
+            <div className={classes.container}>
+                <span>
+                    This uses a hook from the <code>@example/app1-shared</code> package:
+                </span>
+                <div className={classes.card}>
+                    <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
+                </div>
             </div>
         </>
     );
