@@ -7,6 +7,7 @@
     "module": "./src/public-api.ts",
     "exports": {
         ".": "./src/public-api.ts",
+        "./web.css": "./src/web.css",
         "./routes": "./src/routes.tsx"
     },
     "scripts": {

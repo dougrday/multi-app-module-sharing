@@ -1,11 +1,11 @@
 import { App2Component } from "@example/app2-shared";
-import "./App1.css";
 import viteLogo from "./assets/vite.svg";
+import classes from "./App1.module.css";
 
 function App1() {
     return (
         <>
-            <div>
+            <div className={classes.logo}>
                 <a href="https://vite.dev" target="_blank">
                     <img src={viteLogo} className="logo" alt="Vite logo" />
                 </a>
