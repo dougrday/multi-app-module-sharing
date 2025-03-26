@@ -20,6 +20,10 @@
         - Load app-specific CSS during route transitions
         - Ensure styles are ready before app initialization
         - Consider using CSS-in-JS or CSS Modules for better isolation
+
+        Note:
+        Keeping these with `rel="preload"` is still likely the way to go though, to ensure
+        the user experience stays nice and snappy.
         -->
 
         <link rel="stylesheet" href="http://localhost:3002/web.css" />
