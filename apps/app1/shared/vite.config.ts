@@ -6,7 +6,7 @@ export default buildViteConfig({
         fileName: "shared",
         formats: ["es"],
     },
-    reactOptions: { jsxRuntime: "classic" },
+    preview: { port: 3001 },
     server: {
         port: 3001,
     },

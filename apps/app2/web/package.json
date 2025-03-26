@@ -3,10 +3,10 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
-    "main": "./src/App2.tsx",
-    "module": "./src/App2.tsx",
+    "main": "./src/public-api.ts",
+    "module": "./src/public-api.ts",
     "exports": {
-        ".": "./src/App2.tsx",
+        ".": "./src/public-api.ts",
         "./routes": "./src/routes.tsx"
     },
     "scripts": {

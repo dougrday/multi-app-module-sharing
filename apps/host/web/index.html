@@ -5,16 +5,11 @@
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Multi-App Deployment with Shared Modules</title>
-        <!--
-        Use an import map to route to independent app resources. Note that in a real-world situation,
-        both shared and web resources would likely get deployed together in the same container (i.e. same port)
-        -->
         <script type="importmap">
             {
                 "imports": {
-                    "react": "https://esm.sh/react@19/?dev",
-                    "react-dom": "https://esm.sh/react-dom@19/client?dev",
-                    "react-router": ""https://esm.sh/react-router@7.4.0",
+                    "react": "https://esm.sh/react@18.2?dev",
+                    "react-dom/client": "https://esm.sh/react-dom@18.2/client?dev",
                     "@example/app1-shared": "http://localhost:3001/shared.js",
                     "@example/app1-web": "http://localhost:3002/web.js",
                     "@example/app2-shared": "http://localhost:3003/shared.js",
