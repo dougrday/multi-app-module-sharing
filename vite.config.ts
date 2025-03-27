@@ -26,6 +26,7 @@ export const buildViteConfig = ({ lib, preview, reactOptions, rollupOptions, ser
                     "@example/app2-web",
                     "react",
                     "react-dom/client",
+                    "react-router",
                 ],
                 ...rollupOptions,
             },

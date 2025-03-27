@@ -1,24 +1,19 @@
-import { App2Component } from "@example/app2-shared/components";
-import viteLogo from "./assets/vite.svg";
-import classes from "./App1.module.css";
+import { Outlet } from "react-router";
 
 function App1() {
     return (
-        <>
+        <div>
+            <h2>Pages</h2>
             <div>
-                <a href="https://vite.dev" target="_blank">
-                    <img src={viteLogo} className={classes.logo} alt="Vite logo" />
-                </a>
+                <div>
+                    🟢 <a href="/app1/page1">Page 1</a>
+                </div>
+                <div>
+                    🟢 <a href="/app1/page2">Page 2</a>
+                </div>
             </div>
-            <h1>Vite is cool</h1>
-
-            <div style={{ alignItems: "center", display: "flex", flexDirection: "column" }}>
-                <span>
-                    This component is imported from <code>@example/app2-shared</code>, with its own embedded CSS module:
-                </span>
-                <App2Component />
-            </div>
-        </>
+            <Outlet />
+        </div>
     );
 }
 
